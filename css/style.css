@@ -1,3 +1,60 @@
+.main-container{
+    background: #487eb0;
+}
+.main-header,.income-heading{
+    color: #192a56;
+}
+.input-text{
+    background: #000;
+}
+
+.income-btn,.saving-btn{
+    background: #192a56;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+}
 .massage{
     display: none;
 }
+ /* error massage  style*/
+ .error-massage{
+     height: 200px;
+     width: 400px;
+     background: #e84218e0;
+     border-radius: 20px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     z-index: 1;
+     transform: translate(-50% , -50%);
+     display: none;
+ }
+.massage-body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-transform: capitalize;
+    color: #fff;
+ }
+ .massage-body h5, hr{
+    color: #192a56;;
+}
+ .massage-body hr{
+    background: #00050f;;
+}
+ .massage-body p{
+     font-size: 14px;
+ }
+ .crose{
+     position: absolute;
+     top: 0;
+     right: 0;
+     padding-right:20px ;
+     padding-top:10px ;
+     font-size: 20px;
+     cursor: pointer;
+ }

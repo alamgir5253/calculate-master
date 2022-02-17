@@ -7,13 +7,25 @@
     <title>assignment-5</title>
     <!-- custom css file -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- bootstrap cdn link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <main>
-        <section class="container bg-light p-4">
-            <h1 class="text-center text-uppercase p-3">calculate master</h1>
+        <!-- main calculation paart start  -->
+        <section class="main-container container  p-4">
+            <div id="show-error" class=" error-massage ">
+                <i onclick="errorMassage()" id="hide-error" class="crose fa-solid fa-xmark"></i>
+                <div class="massage-body">
+                    
+                    <h5>error massage</h5>
+                <hr>
+                <p>please !!! <br>  enter a posetive number</p>
+                </div>
+            </div>
+            <h1 class="main-header text-center text-uppercase p-3">calculate master</h1>
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-fluid" src="images/pexels-karolina-grabowska-4475523.jpg" alt="">
@@ -22,10 +34,10 @@
                     <div class="calculate-section text-center mt-5">
                         <!-- income section start -->
                         <div class="income-section">
-                            <div class="income-heading">
-                                <h3>imcome</h3>
+                            <div >
+                                <h3 class="income-heading">Income</h3>
                                 <div class="input-group flex-nowrap">
-                                    <span class="input-group-text" id="addon-wrapping">income</span>
+                                    <span class="input-text input-group-text" id="addon-wrapping">Income</span>
                                     <input id="income-amount" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
                                   </div>
                             </div>
@@ -33,36 +45,52 @@
                         <!-- expenses section start  -->
                         <div class="expenses-section mt-3">
                             <div class="expenses-heading">
-                                <h3>expenses</h3>
+                                <h3 class="income-heading">Expenses</h3>
                                 <div class="input-group flex-nowrap mb-3">
-                                    <span class="input-group-text" id="addon-wrapping">food</span>
+                                    <span class="input-group-text" id="addon-wrapping">Food</span>
                                     <input id="food-amount" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
                                   </div>
                                 <div class="input-group flex-nowrap mb-3">
-                                    <span class="input-group-text" id="addon-wrapping">rent</span>
+                                    <span class="input-group-text" id="addon-wrapping">Rent</span>
                                     <input id="rent-amount" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
                                   </div>
                                 <div class="input-group flex-nowrap">
-                                    <span class="input-group-text" id="addon-wrapping">clothes</span>
+                                    <span class="input-group-text" id="addon-wrapping">Clothes</span>
                                     <input id="clothes-amount" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
                                   </div>
                             </div>
                         </div>
                         <!-- calculate event handelar  -->
                         <div class="event-handelar-button mt-3">
-                            <button id="calculate-amount" class="btn btn-success" >calculate</button>
+                            <button id="calculate-amount" class="income-btn" >Calculate</button>
                         </div>
                         <!-- balance section start  -->
                         <div class="ballance-section mt-3">
-                            <p>total espenses: <span id="total-expenses-amount"></span></p>
-                            <p>balance: <span id="balance-amount"></span></p>
+                            <p>Total Expenses: <span id="total-expenses-amount"></span></p>
+                            <p>Balance: <span id="balance-amount"></span></p>
                             <h3 id="error-massage" class="massage">you don't hava balance</h3>
+                        </div>
+                        <!-- bonus section start  -->
+                        <div class="bonus-section ">
+                            <div class="input-group flex-nowrap ">
+                                <span class="input-group-text" id="addon-wrapping">Save</span>
+                                <input id="saving-input" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+                                <span class="px-4 pt-2">%</span>
+                                <button id="calculate-saving-amount" class="saving-btn" >Save</button
+                              </div>
+                             
+                        </div>
+                        <div class="saving-amount mt-3">
+                            <p>Saving Amount: <span id="saving-amount"></span></p>
+                        </div>
+                        <div class="remain-amount">
+                            <p>Remaining Amount: <span id="remaining-amount"></span></p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
+        <!-- main calculation paart start  -->
     </main>
     
     <!-- js script file  -->

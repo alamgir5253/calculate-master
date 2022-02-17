@@ -16,15 +16,15 @@
     <main>
         <!-- main calculation paart start  -->
         <section class="main-container container  p-4">
+            <!-- error massage start  -->
             <div id="show-error" class=" error-massage ">
                 <i onclick="errorMassage()" id="hide-error" class="crose fa-solid fa-xmark"></i>
                 <div class="massage-body">
-                    
-                    <h5>error massage</h5>
-                <hr>
-                <p>please !!! <br>  enter a posetive number</p>
+                    <h5>error massage</h5><hr>
+                    <p>please !!! <br>enter a posetive number</p>
                 </div>
             </div>
+             <!-- error massage end  -->
             <h1 class="main-header text-center text-uppercase p-3">calculate master</h1>
             <div class="row">
                 <div class="col-md-6">
@@ -37,7 +37,7 @@
                             <div >
                                 <h3 class="income-heading">Income</h3>
                                 <div class="input-group flex-nowrap">
-                                    <span class="input-text input-group-text" id="addon-wrapping">Income</span>
+                                    <span class=" input-group-text" id="addon-wrapping">Income</span>
                                     <input id="income-amount" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
                                   </div>
                             </div>
@@ -68,7 +68,6 @@
                         <div class="ballance-section mt-3">
                             <p>Total Expenses: <span id="total-expenses-amount"></span></p>
                             <p>Balance: <span id="balance-amount"></span></p>
-                            <h3 id="error-massage" class="massage">you don't hava balance</h3>
                         </div>
                         <!-- bonus section start  -->
                         <div class="bonus-section ">
@@ -89,7 +88,7 @@
                 </div>
             </div>
         </section>
-        <!-- main calculation paart start  -->
+        <!-- main calculation part end  -->
     </main>
     
     <!-- js script file  -->
